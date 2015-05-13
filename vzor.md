@@ -35,4 +35,4 @@ Nicméně, pokud chceš, aby se ten kód obarvil, tak od toho tu je takovejhle z
 
 Místo html přijde název jazyka.
 
-To je vše. Pro seznamy, odkazy a další věci doporučuju [tenhle návod](http://stackoverflow.com/editing-help)
+To je vše. Pro seznamy, odkazy a další věci doporučuju [tenhle návod](http://stackoverflow.com/editing-help).

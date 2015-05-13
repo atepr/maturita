@@ -34,9 +34,13 @@ Ukázka struktury na obrázku:
 
 ![Obrázek][1]
 
-    <!DOCTYPE   >
+---
+
+    <!DOCTYPE>
 
 Doctype není ve skutečnosti tag, protože je nepárový a není uzavřený. Umožňuje nastavit typ dokumentu a měl by být prvním elementem vaší webové stránky. Dříve byl jeho zápis poněkud složity, nyní jeho zápis vypadá takto: `<!DOCTYPE html>`
+
+---
 
     <html>
 

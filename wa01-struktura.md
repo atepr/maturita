@@ -42,14 +42,19 @@ Doctype není ve skutečnosti tag, protože je nepárový a není uzavřený. Um
 
 `<html>` tag obaluje celý HTML dokument, který je dále rozdělen na hlavičku (ta obsahuje informace hlavně pro prohlížeč) a tělo, kde je uložen fyzický obsah dokumentu.
 
+---
+
     <head>
 
 Hlavička je první částí HTML dokumentu a obsahuje informace hlavně pro prohlížeč. Povinný je párový tag `<title>`, který specifikuje titulek stránky. Ten se zobrazí na záložce prohlížeče a také se jím řídí vyhledávače. V hlavičce se mohou nacházet i další tagy, jako jsou: `<style>`, `<link>`, `<meta>`, `<script>`, `<noscript>` a `<base>`.
+
+---
 
     <title>
 
 `<title>` je párový tag a obsahuje titulek stránky. Každá HTML stránka ho musí v hlavičce obsahovat a je velmi důležitý pro vyhledávače z hlediska SEO. Titulek by měl obsahovat klíčová slova a zobrazí se jako nadpis záložky v prohlížeči.
 
+---
 
     <style>
 
@@ -71,6 +76,8 @@ Ukázka stylu, kde jsou definované styly pro nadpis h1:
     }
 </style>
 ```
+
+---
 
     <link>
 

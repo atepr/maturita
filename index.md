@@ -7,7 +7,7 @@ Otázky z webových aplikací
 
 1. [Struktura HTML dokumentu](wa01-struktura)
 2. [Layout](wa02-layout)
-3. Tabulky, obrázky, odkazy
+3. [Tabulky, obrázky, odkazy](wa03-tabulky)
 4. Formuláře
 5. Styly CSS
 6. Document Object Model (DOM)

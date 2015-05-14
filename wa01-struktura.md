@@ -141,10 +141,139 @@ Tag má nasledující atributy:
 * **`defer`** - Skript je spuštěn až po dokončení parsování stránky. Atribut je též typu boolean.
 * **`type`** - Obsahuje MIME typ skriptu. Nejčastěji se používá hodnota text/javascript.
 * **`charset`** - Specifikuje znakovou sadu uvnitř skriptu.
-* **`src`** - Specifikuje umístění externího skriptu. Pokud je atribut uveden, musí být obsah tagu < script> prázdný.
+* **`src`** - Specifikuje umístění externího skriptu. Pokud je atribut uveden, musí být obsah tagu `<script>` prázdný.
 
 Ukázka tagů script:
 
---dodělat--
+```html
+<!-- Interní script: -->
+<script type="text/javascript">
+    alert("Ahoj");
+</script>
+
+<!-- Externí script: -->
+<script type="text/javascript" src="zprava.js"></script>
+```
+
+-----------------------------------------------------------------------------------------------------------------------
+
+    <noscript>
+
+`<noscript>` slouží k zobrazení alternativního obsahu v případě, že prohlížeč zpracování klientských skriptů nepodporuje, nebo ho uživatel zakázal. Do HTML 4 směl být `<noscript>` obsažen pouze v `<body>`, nyní může být umístěn i v `<head>`. 
+
+Ukázka:
+
+```html
+<noscript>
+    Zapněte si prosím JavaScript.
+</noscript>
+```
+
+----------------------------------------------------------------------------------------------------
+
+    <base>
+
+`<base>` umožňuje nastavit kořenovou složku pro relativní odkazy v dokumentu. Její nastavení tak ovlivní např. odkazy, obrázky a další prvky, u kterých je specifikováno relativní umístění.Tag může být umístěn pouze v sekci `<head>` a to jen jednou. Po vložení tagu base do hlavičky můžeme psát jednoduchou cestu k obrázkům které se nacházejí na této adrese která se nachází v base
+
+`<base>` má nasledující atributy:
+
+* href - Specifikuje kořenovou složku pro všechna relativní URL v dokumentu.
+* target - Specifikuje cílové umístění pro všechny odkazy.
+
+Ukázka tagu `<base>`
+
+```html
+<base href="http://www.example.com/images/">
+```
+
+----------------------------------------------------------------------------------------------
+
+    <body>
+
+Do těla stránky již patří tagy, které se uživateli zobrazí. Jsou to např. odstavce s textem, obrázky, tabulky, seznamy a podobně. Tyto tagy jsou ještě uloženy v tzv. layoutu.
+
+Formátování pomocí CSS
+----------------------
+
+CSS se využívá k formátování textu, barev, rozvržení, atd.. . Web lze formátovat přímo na stránce pomocí tagů `<style>` jak jsme si vysvětlovali, dále můžeme importovat externí styly pomocí tagu `<link>`, jak jsem už také psal. Styly které defunujeme přiřazujeme jednotlivým textům, obrázkům, atd.. pomocí selektorů (id, class), a nebo definujeme přímo pro atribut (h1-h6, p, img, atd...). 
+
+Ukázka tagu stylů dle selektorů:
+
+```css
+h1      {color: #0000ff; font-family: monospace;}   /* Styly pro všechny nadpisy <h1></h1> */
+.nadpis {color: #0110ff; font-family: fantasy;}     /* Styly pro prvky s class="nadpis" (může jich být více) */
+#blok   {float:left; text-align: center;}           /* Styly pro prvek s id="blok" (může být jen jeden) */
+```
+
+----------------------------
+
+[Přehled vlastností CSS- download](doc/wa01_CSS.docx)
+
+-----------------
+
+Rozdíl XHTML oproti HTML
+
+* Tagy a atributy jsou malými písmeny
+* Nepárové tagy končí lomítkem
+* Párové tagy jsou párové povinně
+* Všechny atributy musejí mít hodnotu
+* Interní javascript a styly se zapisují jiným způsobem
+* Dokument má mít XML prolog.
+* Dokument požaduje správný doctype.
+
+Znakové sady
+
+1. ISO 8859-2 (používal se hlavně na Unixu a Linuxu)
+2. Windows-1250 (preferovaný na Windows)
+3. UTF-8 (unicode, univerzální)
+
+Textové prvky
+=============
+
+Tag               | Význam                | párový
+------------------|-----------------------|--------
+`<p>`             | Odstavec              | Nepovinně
+`<br>`            | Odřádkování           | Ne
+`<h1>`            | Nadpis 1.úrovně       | Ano
+`<h2>`            | Nadpis 2.úrovně       | Ano
+`<h3>`            | Nadpis 3.úrovně       | Ano
+`<h4>`            | Nadpis 4.úrovně       | Ano
+`<h5>`            | Nadpis 5.úrovně       | Ano
+`<h6>`            | Nadpis 6.úrovně       | Ano
+`<blockquote>`    | Citace                | Ano
+`<address>`       | Adresa                | Ano
+`<pre>`           | Předformátovaný text  | Ano
+`<hr>`            | Vodorovná čára        | Ne
+`<div>`           | Oddíl                 | Ano
+
+Seznamy
+=======
+
+Tag       | Význam                    | Párový
+----------|---------------------------|------------
+`<li>`    | Položka seznamu           | Nepovinně
+`<ol>`    | Číslovaný seznam          | Ano
+`<ul>`    | Odrážkový seznam          | Ano
+`<dir>`   | Zvláštní druh seznamu     | Ano
+`<menu>`  | Typ seznamu               | Ano
+`<dl>`    | Seznam definic            | Ano
+`<dt>`    | Definovaný termín         | Ano
+`<dd>`    | Definice termínu          | Ano
+
+-------------------------------------------------
+
+    <li>
+
+`<li>` obsahuje následující atributy:
+
+* type - Zde se nastavuje druh odrážky popřípadě číslování. Druhy odrážky jsou puntík, kolečko, čtvereček (disc, circle, square). Jako číslování můžeme nastavit normální číslování, velké písmenkování, malé písmenkování, římské číslice, malé římské číslice (1, A, a, I, i)
+* value - Změna čísla. číslo položky (převedeno podle typu číslování).
+
+----------------
+
+Ukázka seznamů:
+
+![Ukázka][2]
 
 [1]: images/wa01_1.png
+[2]: http://www.maturita-web.4fan.cz/HTML-a-CSS/img/seznamy.png

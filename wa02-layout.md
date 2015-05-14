@@ -5,14 +5,14 @@ title: HTML - Layout
 Otázka 2: Layout
 ================
 
->` Zadání
->` ------
->` 
->` **Layout**  
->` Rozvržení stránky - div.
->` 
->` **Div**  
->` Velikost, umístění, obtékání a další vlastnosti bloků.
+> Zadání
+> ------
+> 
+> **Layout**  
+> Rozvržení stránky - div.
+> 
+> **Div**  
+> Velikost, umístění, obtékání a další vlastnosti bloků.
 
 Stránka je většinou dělena do několika částí, jako je hlavička, menu, obsah, atd.
 

@@ -10,7 +10,7 @@ Otázky z webových aplikací
 3. [Tabulky, obrázky, odkazy](wa03-tabulky)
 4. Formuláře
 5. Styly CSS
-6. Document Object Model (DOM)
+6. [Document Object Model (DOM)](wa06-dom)
 7. Základy programování v JavaScriptu
 8. Objekty Math, String, Date
 9. Události JavaScriptu, regulární výrazy

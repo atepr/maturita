@@ -6,7 +6,7 @@ Otázky z webových aplikací
 ==========================
 
 1. [Struktura HTML dokumentu](wa01-struktura)
-2. Layout
+2. [Layout](wa02-layout)
 3. Tabulky, obrázky, odkazy
 4. Formuláře
 5. Styly CSS

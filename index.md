@@ -17,7 +17,7 @@ Otázky z webových aplikací
 10. Uživatelské funkce v JavaScriptu
 11. Proměnné, pole, podmíněné příkazy, cykly
 12. Zpracování dat formuláře
-13. Uložení dat do databáze
+13. [Uložení dat do databáze](wa13-ulozeni)
 14. Výpis dat z databáze
 15. Editace dat
 16. Smazání dat

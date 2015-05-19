@@ -18,7 +18,7 @@ Názvy jednotlivých metod v Aj jsou asi výstižné a většina funkcí bude po
 
 ```js
 var datum = new Date();
-var zformatovaneDatum = datum.getDate() + "." + datum.getMonth() + "." + datum.getFullYear();
+var zformatovaneDatum = datum.getDate() + "." + (datum.getMonth() + 1) + "." + datum.getFullYear();
 document.write(zformatovaneDatum);
 ```
 
@@ -27,7 +27,31 @@ Výsledek:
 <blockquote>
 <script>
 var datum = new Date();
-var zformatovaneDatum = datum.getDate() + "." + datum.getMonth() + "." + datum.getFullYear();
+var zformatovaneDatum = datum.getDate() + "." + (datum.getMonth() + 1) + "." + datum.getFullYear();
 document.write(zformatovaneDatum);
+</script>
+</blockquote>
+
+##Obrázek podle aktuálního měsíce
+
+```html
+<img src="null.png" alt="Obrázek podle měsíce" id=obr>
+<script>
+    var datum = new Date();
+    var mesic = datum.getMonth() + 1;
+    var url = "http://lorempixel.com/100/75/business/" + mesic; // Opravdu nebudu schánět obrázek ke každýmu měsíci
+    document.getElementById("obr").src = url;
+</script>
+```
+
+Výsledek:
+
+<blockquote>
+<img src="null.png" alt="Obrázek podle měsíce" id=obr>
+<script>
+    var datum = new Date();
+    var mesic = datum.getMonth() + 1;
+    var url = "http://lorempixel.com/100/75/business/" + mesic; // Opravdu nebudu schánět obrázek ke každýmu měsíci
+    document.getElementById("obr").src = url;
 </script>
 </blockquote>

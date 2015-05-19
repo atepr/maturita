@@ -35,31 +35,31 @@ document.write(zformatovaneDatum);
 ##Obrázek podle aktuálního měsíce
 
 ```html
-<img src="null.png" alt="Obrázek podle měsíce" id=obr>
+<img src="null.png" alt="Obrázek podle měsíce" id=obr1>
 <script>
     var datum = new Date();
     var mesic = datum.getMonth() + 1;
     var url = "http://lorempixel.com/100/75/business/" + mesic; // Opravdu nebudu schánět obrázek ke každýmu měsíci
-    document.getElementById("obr").src = url;
+    document.getElementById("obr1").src = url;
 </script>
 ```
 
 Výsledek:
 
 <blockquote>
-<img src="null.png" alt="Obrázek podle měsíce" id=obr>
+<img src="null.png" alt="Obrázek podle měsíce" id=obr1>
 <script>
     var datum = new Date();
     var mesic = datum.getMonth() + 1;
     var url = "http://lorempixel.com/100/75/business/" + mesic; // Opravdu nebudu schánět obrázek ke každýmu měsíci
-    document.getElementById("obr").src = url;
+    document.getElementById("obr1").src = url;
 </script>
 </blockquote>
 
 ##Náhodně vybraný obrázek (názvy obrázků jsou uloženy v poli)
 
 ```html
-<img src="null.png" alt="Náhodný obrázek" id=obr>
+<img src="null.png" alt="Náhodný obrázek" id=obr2>
 <script>
     // Adresa obrázku je: http://lorempixel.com/400/200/xxxxx/1/
     // kde xxxxx může být animals, cats, food nebo transport
@@ -67,26 +67,26 @@ Výsledek:
     var moznosti = ["animals", "cats", "food", "transport"];
     var vybranaMozn = Math.floor(moznosti.length * Math.random()); // Vygeneruje číslo možnosti (od 0 do 3)
     var url = "http://lorempixel.com/100/75/" + moznosti[vybranaMozn] + "/1";
-    document.getElementById("obr").src = url;
+    document.getElementById("obr2").src = url;
 </script>
 ```
 
 Výsledek:
 
 <blockquote>
-<img src="null.png" alt="Obrázek podle měsíce" id=obr>
+<img src="null.png" alt="Obrázek podle měsíce" id=obr2>
 <script>
     var moznosti = ["animals", "cats", "food", "transport"];
     var vybranaMozn = Math.floor(moznosti.length * Math.random()); // Vygeneruje číslo možnosti (od 0 do 3)
     var url = "http://lorempixel.com/100/75/" + moznosti[vybranaMozn] + "/1";
-    document.getElementById("obr").src = url;
+    document.getElementById("obr2").src = url;
 </script>
 </blockquote>
 
 ##Náhodně vybraný obrázek (názvy obrázku je číslo)
 
 ```html
-<img src="null.png" alt="Náhodný obrázek" id=obr>
+<img src="null.png" alt="Náhodný obrázek" id=obr3>
 <script>
     // Adresa obrázku je: http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_xxxxx_detsky_turnaj_bad.jpg
     // kde xxxxx může být libovolné číslo od 01 do 30.
@@ -99,14 +99,14 @@ Výsledek:
         vybranaMozn = "0" + vybranaMozn;
     
     var url = "http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_" + moznosti[vybranaMozn] + "_detsky_turnaj_bad.jpg";
-    document.getElementById("obr").src = url;
+    document.getElementById("obr3").src = url;
 </script>
 ```
 
 Výsledek:
 
 <blockquote>
-<img src="null.png" alt="Obrázek podle měsíce" id=obr>
+<img src="null.png" alt="Obrázek podle měsíce" id=obr4>
 <script>
     var POCET_FOTEK = 30;
     var vybranaMozn = 1 + Math.floor(POCET_FOTEK * Math.random()); // Vygeneruje číslo možnosti (od 1 do 30)
@@ -115,6 +115,6 @@ Výsledek:
         vybranaMozn = "0" + vybranaMozn;
     
     var url = "http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_" + moznosti[vybranaMozn] + "_detsky_turnaj_bad.jpg";
-    document.getElementById("obr").src = url;
+    document.getElementById("obr4").src = url;
 </script>
 </blockquote>

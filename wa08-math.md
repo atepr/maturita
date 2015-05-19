@@ -133,7 +133,7 @@ Výsledek:
 
 > auticko
 
-##Náhodný písmenný kód.
+##Náhodný písmenný kód
 
 **Vzorové zadání:** vytvořte 10místný kód, který bude složen ze znaků 0-9 a a-f.
 

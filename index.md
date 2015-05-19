@@ -17,10 +17,10 @@ Otázky z webových aplikací
 10. Uživatelské funkce v JavaScriptu
 11. Proměnné, pole, podmíněné příkazy, cykly
 12. Zpracování dat formuláře
-13. Uložení dat do databáze
-14. Výpis dat z databáze
-15. Editace dat
-16. Smazání dat
+13. [Uložení dat do databáze](wa13-ulozeni)
+14. [Výpis dat z databáze] (wa14-vypis)
+15. [Editace dat] (wa15-editace)
+16. [Smazání dat] (wa16-mazani)
 17. Funkce php
 18. Uživatelské funkce
 19. Session, cookies

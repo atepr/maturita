@@ -2,7 +2,7 @@
 title: Objekty Math, String, Date
 ---
 
-Otázka 7: Objekty Math, String, Date
+Otázka 8: Objekty Math, String, Date
 ====================================
 
 > Zadání

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Kalendář</title>
+    <meta charset=UTF-8>
+    <style>
+        body{
+            background: #eec;
+            margin: 0px;
+        }
+        article{
+            width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 10px;
+        }
+        td
+        {
+            background: #eee;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .dny td:nth-child(6), .so
+        {
+            background: #aaa;
+        }
+    </style>
+  </head>
+  <body>
+    <article>
+        <h1>Kalendář</h1>
+        <script type="text/javascript">
+            var o = "<table>";
+            var mesice = ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"];
+            var dny = ["Po", "Út", "St", "Čt", "Pá", "So", "Ne"];
+            var dnes = new Date();
+            var prvniho = new Date(dnes.getFullYear(), dnes.getMonth(), 1);
+            var posledniho = new Date(dnes.getFullYear(), dnes.getMonth() + 1, 0);
+
+            o += "<tr><td colspan=7>" + mesice[dnes.getMonth()] + "</td></tr>";
+            o += "<tr class=dny><td>" + dny.join("</td><td>") + "</td></tr>";
+
+            o += "<tr>";
+
+            for (i = 1; i < (prvniho.getDay() ? prvniho.getDay() : 7); i++)
+            {
+                o += "<td" + (i%7 == 6 ? " class=so" : "") + "></td>";
+            }
+
+            for (i = 1; i <= posledniho.getDate(); i++)
+            {
+                o += "<td" + ((prvniho.getDay() + i) % 7 == 0 ? " class=so" : "") + ">" + i + "</td>";
+                if ((prvniho.getDay() + i) % 7 == 1 && i != posledniho.getDate())
+                {
+                    o += "</tr><tr>";
+                }
+            }
+
+            for (i = 0; i < (7 - posledniho.getDay()) && posledniho.getDay() != 0; i++)
+            {
+                o += "<td" + ((posledniho.getDay() + i) % 7 == 5 ? " class=so" : "") + "></td>";
+            }
+
+            o += "</tr></table>";
+            document.write(o);
+        </script>
+    </article>
+  </body>
+</html>

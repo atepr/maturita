@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Stopky</title>
+    <meta charset=UTF-8>
+    <style>
+        body{
+            background: #eec;
+            margin: 0px;
+        }
+        article{
+            width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        var casovac, zacatek; // Pouze slušnost, funguje i bez tohoto řádku
+        
+        function start(){
+            var aktualniCas = new Date();
+            zacatek = aktualniCas.getTime();
+            casovac = setInterval(mer, 10);
+        }
+        
+        function stop(){
+            clearInterval(casovac);
+            mer();
+        }
+        
+        function mer(){
+            var aktualniCas = new Date();
+            var uplynulyCas = aktualniCas.getTime() - zacatek; // v milisekundách
+            var minuty = Math.floor(uplynulyCas / (60 * 1000));
+            var sekundy = Math.floor(uplynulyCas / 1000) % 60;
+            var setiny = Math.floor(uplynulyCas / 10) % 100;
+            
+            /*
+             * Doplnění nul k sekundám a setinám, pokud jsou menší než 10:
+             */
+            
+            if (sekundy < 10)
+                sekundy = "0" + sekundy;
+            if (setiny < 10)
+                setiny = "0" + setiny;
+            
+            document.getElementById("cas").innerHTML = minuty + ":" + sekundy + "." + setiny;
+        }
+    </script>
+  </head>
+  <body>
+    <article>
+        <h1>Stopky</h1>
+        <p>Aktuální čas: <b id=cas>0:00.00</b></p>
+        <p><input type=button value=Start id=start onclick="start()"> <input type=button value=Stop id=stop onclick="stop()"></p>
+    </article>
+  </body>
+</html>

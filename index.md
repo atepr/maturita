@@ -11,16 +11,16 @@ Otázky z webových aplikací
 4. Formuláře
 5. Styly CSS
 6. [Document Object Model (DOM)](wa06-dom)
-7. Základy programování v JavaScriptu
+7. [Základy programování v JavaScriptu](wa07-zaklady)
 8. Objekty Math, String, Date
 9. Události JavaScriptu, regulární výrazy
 10. Uživatelské funkce v JavaScriptu
 11. Proměnné, pole, podmíněné příkazy, cykly
 12. Zpracování dat formuláře
 13. [Uložení dat do databáze](wa13-ulozeni)
-14. [Výpis dat z databáze] (wa14-vypis)
-15. [Editace dat] (wa15-editace)
-16. [Smazání dat] (wa16-mazani)
+14. [Výpis dat z databáze](wa14-vypis)
+15. [Editace dat](wa15-editace)
+16. [Smazání dat](wa16-mazani)
 17. Funkce php
 18. Uživatelské funkce
 19. Session, cookies

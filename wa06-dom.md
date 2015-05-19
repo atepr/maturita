@@ -84,41 +84,41 @@ Slouží k manipulaci s oknem prohlížeče (otevření, zavření, změna velik
 <input type="button" value="Otevři okno" onclick="otevri()">
 <input type="button" value="Otevři okno 2" onclick="otevri2()">
 <input type="button" value="Zavři okno 2" onclick="zavri()">
-<input type="button" value="resizeTo" onclick="window.resizeTo(300,300)">
-<input type="button" value="" onclick="resize()">
+<input type="button" value="okno2.resizeTo(300, 300)" onclick="okno2.resizeTo(300, 300)">
+<input type="button" value="okno2.moveTo(100, 100)" onclick="okno2.moveTo(100, 100)">
 <input type="button" value="" onclick="resize()">
 
 <script>
-var okno;
+var okno2;
 
 function otevri() {
     window.open("http://www.google.com");
 }
 
 function otevri2() {
-    okno = window.open("http://www.google.com", "_blank", "width=500,height=300");
+    okno2 = window.open("http://www.google.com", "_blank", "width=500,height=300");
 }
 
 function zavri() {
-    okno.close();
+    okno2.close();
 }
 </script>
 
 Ukázka kódu js prvních 3 tlačítek:
 
 ```js
-var okno;
+var okno2;
 
 function otevri() {
     window.open("http://www.google.com");
 }
 
 function otevri2() {
-    okno = window.open("http://www.google.com", "_blank", "width=500,height=300");
+    okno2 = window.open("http://www.google.com", "_blank", "width=500,height=300");
 }
 
 function zavri() {
-    okno.close();
+    okno2.close();
 }
 ```
 

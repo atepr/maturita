@@ -98,7 +98,7 @@ Výsledek:
     if (vybranaMozn < 10)
         vybranaMozn = "0" + vybranaMozn;
     
-    var url = "http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_" + moznosti[vybranaMozn] + "_detsky_turnaj_bad.jpg";
+    var url = "http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_" + vybranaMozn + "_detsky_turnaj_bad.jpg";
     document.getElementById("obr3").src = url;
 </script>
 ```
@@ -114,7 +114,48 @@ Výsledek:
     if (vybranaMozn < 10)
         vybranaMozn = "0" + vybranaMozn;
     
-    var url = "http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_" + moznosti[vybranaMozn] + "_detsky_turnaj_bad.jpg";
+    var url = "http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_" + vybranaMozn + "_detsky_turnaj_bad.jpg";
     document.getElementById("obr4").src = url;
+</script>
+</blockquote>
+
+##Výpis názvu souboru bez přípony
+
+Možností je spousta, toto je jen jedna z nich. Lze použít např. i `indexOf` + `substring` nebo regulární výrazy.
+
+```js
+var obrSPriponou = "auticko.png";
+var casti = obrSPriponou.split(".");
+document.write(casti[0]);
+```
+
+Výsledek:
+
+> auticko
+
+##Náhodný písmenný kód.
+
+
+```js
+var ZNAKY = "0123456789abcdef";
+var POCET_MIST = 10;
+var vyslednyRetezec = "";
+
+for (i = 0; i < POCET_MIST; i++){
+    var cisloZnaku = Math.floor(ZNAKY.length * Math.random());
+    vyslednyRetezec += ZNAKY[cisloZnaku];
+}
+
+document.write(vyslednyRetezec);
+```
+
+Výsledek:
+
+<blockquote>
+<script>
+var ZNAKY = "0123456789abcdef";
+var POCET_MIST = 10;
+for (i = 0; i < POCET_MIST; i++)
+    document.write(ZNAKY[Math.floor(ZNAKY.length * Math.random())]);
 </script>
 </blockquote>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Fotogalerie</title>
+    <meta charset=UTF-8>
+    <style>
+        body{
+            background: #eec;
+            margin: 0px;
+        }
+        article{
+            width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 10px;
+        }
+        div{
+            width: 400px;
+        }
+        #bp{
+            float: right;
+        }
+        #f{
+            display: block;
+            margin-bottom: 5px;
+        }
+        img:not(#f){
+            margin: 0px 3px;
+            border: 1px solid #ccc;
+            opacity: .8;
+            cursor: pointer;
+        }
+        img:not(#f):hover{
+            border: 1px solid #999;
+            opacity: .9;
+        }
+        img:not(#f).active{
+            border: 1px solid red;
+            opacity: 1;
+        }
+    </style>
+    <script>
+        var c = 1;
+        function zobraz (i){
+            i = Math.max(1, Math.min(i, 6));
+            document.getElementById("m"+c).className = "";
+            document.getElementById("f").src="http://lorempixel.com/400/300/city/"+i;
+            document.getElementById("m"+i).className = "active";
+            c = i;
+        }
+    </script>
+  </head>
+  <body>
+    <article>
+        <h1>Fotogalerie</h1>
+        <div>
+            <img src="http://lorempixel.com/400/300/city/1" alt="Foto" id="f">
+            <input type="button" value="&lt;&lt;" onclick="zobraz(c-1)">
+            <input type="button" value="&gt;&gt;" onclick="zobraz(c+1)" id="bp">
+        </div>
+        <p>
+            <img src='http://lorempixel.com/150/100/city/1' alt=Foto id='m1' onclick='zobraz(1)' class=active>
+            <img src='http://lorempixel.com/150/100/city/2' alt=Foto id='m2' onclick='zobraz(2)'>
+            <img src='http://lorempixel.com/150/100/city/3' alt=Foto id='m3' onclick='zobraz(3)'><br>
+            <img src='http://lorempixel.com/150/100/city/4' alt=Foto id='m4' onclick='zobraz(4)'>
+            <img src='http://lorempixel.com/150/100/city/5' alt=Foto id='m5' onclick='zobraz(5)'>
+            <img src='http://lorempixel.com/150/100/city/6' alt=Foto id='m6' onclick='zobraz(6)'>
+        </p>
+    </article>
+  </body>
+</html>

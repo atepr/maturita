@@ -86,6 +86,7 @@ Slouží k manipulaci s oknem prohlížeče (otevření, zavření, změna velik
 <input type="button" value="Zavři okno 2" onclick="zavri()">
 <input type="button" value="okno2.resizeTo(300, 300)" onclick="okno2.resizeTo(300, 300)">
 <input type="button" value="okno2.moveTo(100, 100)" onclick="okno2.moveTo(100, 100)">
+<input type="button" value="okno2.focus()" onclick="okno2.focus()">
 <input type="button" value="window.scrollTo(0, 1000)" onclick="window.scrollTo(0, 1000)">
 
 <script>
@@ -122,9 +123,48 @@ function zavri() {
 }
 ```
 
+Pod `window.něco` patří taky alert, prompt a confirm. Asi známte, pokud ne, je to vysvětleno [třeba tady][7].
+
+##Location, History (back, forvard, go)
+
+Pokud neznáte, tyhle dvě tlačítka vám to vysvětlí:
+
+<input type="button" value='location.href="http://www.google.com"' onclick='location.href="http://www.google.com"'>
+<input type="button" value='history.back()' onclick='history.back()'>
+
+`history.go()` je něco podobného, jako back/forward, akorát do závorky jako parametr napíšete, o kolik kroků chcete jít dopředu. Třeba tohle:
+
+```js
+history.go(-2)
+```
+
+vás vrátí v prohlížeči na předminulou stránku. A `history.go(0)` dělá to samé, co `location.reload()`, `location.href = location.href` nebo klávesa F5.
+
+##navigator.appName
+
+Zastaralá vlastnost, která vám měla říct, co uživatel používá za prohlížeč, pokud byste to náhodou někdy chtěli vědět. Ve skutečnosti to ale řekne, že `Netscape`, bez ohledu na to, co uživatel opravdu používá.
+
+##navigator.appVersion
+
+Pokud se chcete k nesmyslnýmu údaji o názvu prohlížeče dozvědět ještě jeho verzi, tak je tady. S největší pravděpodobností se dozvíte, že je `5.0`. Pro větší zmatek za tím může ještě bejt (třeba v závorce) uvedený nějaký doplňujicí údaj, což je úplná blbost, která nemá s verzí prohlížeče nic společného a nikdy vám k ničemu nebude.
+
+##navigator.userAgent
+
+Pokud byste chtěli o tom prohlížeči opravdu něco vědět, tak tohle je vaše jediná možnost. Tahle vlastnost vrací tzv. user-agenta, tj. řetězec, který obsahuje nějaké údaje o prohlížeči a vypadá nějak takto:
+
+    Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0
+
+Nicméně, najít něco v tomto řetězci je celkem umění. Každý prohlížeč vrací něco úplně jiného. A uživatel může prohlížeč přenastavit tak, aby kecal. A některý prohlížeče kecaj samy od sebe.
+
+#Fotogalerie (praktická ukázka)
+
+[Tady (je to jeden soubor, můžete kliknout pravým a stáhnout si ho).][8]
+
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/Document/write
 [2]: javascript:document.write('Ahoj')
 [3]: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName
 [4]: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName
 [5]: https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
 [6]: http://jsfiddle.net/3bt4bom9/1/
+[7]: https://developer.mozilla.org/en-US/docs/Web/API/Window/alert
+[8]: download/otazka06.html

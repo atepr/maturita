@@ -55,3 +55,66 @@ Výsledek:
     document.getElementById("obr").src = url;
 </script>
 </blockquote>
+
+##Náhodně vybraný obrázek (názvy obrázků jsou uloženy v poli)
+
+```html
+<img src="null.png" alt="Náhodný obrázek" id=obr>
+<script>
+    // Adresa obrázku je: http://lorempixel.com/400/200/xxxxx/1/
+    // kde xxxxx může být animals, cats, food nebo transport
+    
+    var moznosti = ["animals", "cats", "food", "transport"];
+    var vybranaMozn = Math.floor(moznosti.length * Math.random()); // Vygeneruje číslo možnosti (od 0 do 3)
+    var url = "http://lorempixel.com/100/75/" + moznosti[vybranaMozn] + "/1";
+    document.getElementById("obr").src = url;
+</script>
+```
+
+Výsledek:
+
+<blockquote>
+<img src="null.png" alt="Obrázek podle měsíce" id=obr>
+<script>
+    var moznosti = ["animals", "cats", "food", "transport"];
+    var vybranaMozn = Math.floor(moznosti.length * Math.random()); // Vygeneruje číslo možnosti (od 0 do 3)
+    var url = "http://lorempixel.com/100/75/" + moznosti[vybranaMozn] + "/1";
+    document.getElementById("obr").src = url;
+</script>
+</blockquote>
+
+##Náhodně vybraný obrázek (názvy obrázku je číslo)
+
+```html
+<img src="null.png" alt="Náhodný obrázek" id=obr>
+<script>
+    // Adresa obrázku je: http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_xxxxx_detsky_turnaj_bad.jpg
+    // kde xxxxx může být libovolné číslo od 01 do 30.
+    
+    var POCET_FOTEK = 30;
+    var vybranaMozn = 1 + Math.floor(POCET_FOTEK * Math.random()); // Vygeneruje číslo možnosti (od 1 do 30)
+
+    // Pokud je to třeba, přidá se nula na začátek:
+    if (vybranaMozn < 10)
+        vybranaMozn = "0" + vybranaMozn;
+    
+    var url = "http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_" + moznosti[vybranaMozn] + "_detsky_turnaj_bad.jpg";
+    document.getElementById("obr").src = url;
+</script>
+```
+
+Výsledek:
+
+<blockquote>
+<img src="null.png" alt="Obrázek podle měsíce" id=obr>
+<script>
+    var POCET_FOTEK = 30;
+    var vybranaMozn = 1 + Math.floor(POCET_FOTEK * Math.random()); // Vygeneruje číslo možnosti (od 1 do 30)
+
+    if (vybranaMozn < 10)
+        vybranaMozn = "0" + vybranaMozn;
+    
+    var url = "http://sokol-nasavrky.8u.cz/fotogalerie/alba/27/ikony/140405_" + moznosti[vybranaMozn] + "_detsky_turnaj_bad.jpg";
+    document.getElementById("obr").src = url;
+</script>
+</blockquote>

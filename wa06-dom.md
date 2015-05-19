@@ -86,7 +86,7 @@ Slouží k manipulaci s oknem prohlížeče (otevření, zavření, změna velik
 <input type="button" value="Zavři okno 2" onclick="zavri()">
 <input type="button" value="okno2.resizeTo(300, 300)" onclick="okno2.resizeTo(300, 300)">
 <input type="button" value="okno2.moveTo(100, 100)" onclick="okno2.moveTo(100, 100)">
-<input type="button" value="" onclick="resize()">
+<input type="button" value="window.scrollTo(0, 1000)" onclick="window.scrollTo(0, 1000)">
 
 <script>
 var okno2;
@@ -96,7 +96,7 @@ function otevri() {
 }
 
 function otevri2() {
-    okno2 = window.open("http://www.google.com", "_blank", "width=500,height=300");
+    okno2 = window.open("vzor", "_blank", "width=500,height=300");
 }
 
 function zavri() {

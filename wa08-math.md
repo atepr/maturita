@@ -135,6 +135,7 @@ Výsledek:
 
 ##Náhodný písmenný kód.
 
+**Vzorové zadání:** vytvořte 10místný kód, který bude složen ze znaků 0-9 a a-f.
 
 ```js
 var ZNAKY = "0123456789abcdef";

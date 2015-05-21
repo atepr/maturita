@@ -1,5 +1,5 @@
 ---
-title: Struktura HTML dokumentu
+title: Výpis dat z databáze
 ---
 
 Otázka 14: Výpis dat z databáze

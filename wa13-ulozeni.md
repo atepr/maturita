@@ -1,5 +1,5 @@
 ---
-title: Struktura HTML dokumentu
+title: Uložení dat do databáze
 ---
 
 Otázka 13: Uložení dat do databáze

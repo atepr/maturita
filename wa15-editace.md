@@ -1,5 +1,5 @@
 ---
-title: Struktura HTML dokumentu
+title: Editace dat
 ---
 
 Otázka 15: Editace dat

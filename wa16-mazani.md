@@ -1,5 +1,5 @@
 ---
-title: Struktura HTML dokumentu
+title: Smazání dat
 ---
 
 Otázka 16: Smazání dat

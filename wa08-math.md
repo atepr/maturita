@@ -32,6 +32,26 @@ document.write(zformatovaneDatum);
 </script>
 </blockquote>
 
+##Zítřejší datum
+
+```js
+var datum = new Date();
+datum.setHours(24); //rychlejší varianta než testovat, zda je poslední den v měsíci a pak i v roce
+var zformatovaneDatum = datum.getDate() + "." + (datum.getMonth() + 1) + "." + datum.getFullYear();
+document.write(zformatovaneDatum);
+```
+
+Výsledek:
+
+<blockquote>
+<script>
+var datum = new Date();
+datum.setHours(24);
+var zformatovaneDatum = datum.getDate() + "." + (datum.getMonth() + 1) + "." + datum.getFullYear();
+document.write(zformatovaneDatum);
+</script>
+</blockquote>
+
 ##Obrázek podle aktuálního měsíce
 
 ```html

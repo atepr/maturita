@@ -99,7 +99,7 @@ U elementu můžeme uvést nasledující atributy:
 Ukázka připojení externího CSS stylu a ikonky zvané favicon:
 
 ```html
-<link rel="stylesheet" type="text/css" href="nazev-souboru.css">
+<link rel="stylesheet" href="nazev-souboru.css">
 <link rel="icon" href="favicon.ico">
 ```
 
@@ -147,12 +147,12 @@ Ukázka tagů script:
 
 ```html
 <!-- Interní script: -->
-<script type="text/javascript">
+<script>
     alert("Ahoj");
 </script>
 
 <!-- Externí script: -->
-<script type="text/javascript" src="zprava.js"></script>
+<script src="zprava.js"></script>
 ```
 
 -----------------------------------------------------------------------------------------------------------------------

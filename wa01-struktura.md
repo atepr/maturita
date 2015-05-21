@@ -207,7 +207,7 @@ h1      {color: #0000ff; font-family: monospace;}   /* Styly pro všechny nadpis
 
 ----------------------------
 
-[Přehled vlastností CSS- download](doc/wa01_CSS.docx)
+[Přehled vlastností CSS- download][3]
 
 -----------------
 
@@ -276,4 +276,5 @@ Ukázka seznamů:
 ![Ukázka][2]
 
 [1]: images/wa01_1.png
-[2]: http://www.maturita-web.4fan.cz/HTML-a-CSS/img/seznamy.png
+[2]: images/wa01_seznamy.png
+[3]: download/otazka01_CSS.docx

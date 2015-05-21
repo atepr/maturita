@@ -13,7 +13,7 @@ Otázky z webových aplikací
 6. [Document Object Model (DOM)](wa06-dom)
 7. [Základy programování v JavaScriptu](wa07-zaklady)
 8. [Objekty Math, String, Date](wa08-math)
-9. Události JavaScriptu, regulární výrazy
+9. [Události JavaScriptu, regulární výrazy](wa09-udalosti)
 10. Uživatelské funkce v JavaScriptu
 11. Proměnné, pole, podmíněné příkazy, cykly
 12. Zpracování dat formuláře
